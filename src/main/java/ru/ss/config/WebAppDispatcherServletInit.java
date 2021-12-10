@@ -26,6 +26,7 @@ public class WebAppDispatcherServletInit extends AbstractAnnotationConfigDispatc
     public void onStartup(ServletContext aServletContext) throws ServletException {
         super.onStartup(aServletContext);
         registerHiddenFieldFilter(aServletContext);
+        aServletContext.setResponseCharacterEncoding("UTF-8");
     }
 
     private void registerHiddenFieldFilter(ServletContext aContext) {
